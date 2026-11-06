@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <title>Utensil Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Phone Frame Wrapper -->
+  <div class="phone-frame">
+    <!-- Top Status Bar -->
+    <div class="phone-status-bar">
+      <span>9:41</span>
+      <div class="phone-notch"></div>
+      <div class="status-icons">📶 🔋</div>
+    </div>
+
+    <!-- App Content -->
+    <div class="app-content">
+      <!-- Header with Language Switcher -->
+      <header class="app-header">
+        <div class="logo-box">⚖️</div>
+        <div>
+          <h1 id="txt-title">Utensil Calculator</h1>
+          <p class="subtitle" id="txt-subtitle">Rate & Weight Price</p>
+        </div>
+        <button type="button" class="lang-btn" id="btn-lang-toggle">हिंदी</button>
+      </header>
+
+      <!-- Main Clean Card -->
+      <main class="card main-calculator">
+        <!-- Block 1: Rate per kg -->
+        <div class="input-group">
+          <div class="label-row">
+            <label for="rate-per-kg" id="lbl-rate">1. Rate of 1 kg (₹)</label>
+            <span class="currency-badge">₹ / kg</span>
+          </div>
+          <div class="input-wrapper input-with-prefix">
+            <span class="prefix">₹</span>
+            <input type="number" id="rate-per-kg" inputmode="decimal" step="any" placeholder="0" autofocus>
+          </div>
+        </div>
+
+        <!-- Block 2: Utensil Weight -->
+        <div class="input-group">
+          <div class="label-row">
+            <label for="weight" id="lbl-weight">2. Weight of Utensil</label>
+            <div class="unit-toggle" role="radiogroup">
+              <button type="button" class="unit-btn active" id="unit-grams">Grams (g)</button>
+              <button type="button" class="unit-btn" id="unit-kg">Kg</button>
+            </div>
+          </div>
+          <div class="input-wrapper input-with-suffix">
+            <input type="number" id="weight" inputmode="decimal" step="any" placeholder="0">
+            <span class="suffix" id="unit-suffix">g</span>
+          </div>
+        </div>
+
+        <!-- Clear Button -->
+        <div class="clear-row">
+          <button type="button" class="btn-clear" id="btn-clear">🗑️ Clear</button>
+        </div>
+
+        <!-- Big Price Result Box -->
+        <div class="result-box">
+          <div class="result-label" id="lbl-result">CALCULATED PRICE</div>
+          <div class="result-amount" id="total-price">₹0.00</div>
+          <div class="result-formula" id="formula-breakdown">Enter rate and weight above</div>
+        </div>
+      </main>
+
+      <footer class="simple-footer">
+        <p id="txt-formula-hint">Price = Rate per kg × (Weight in grams ÷ 1000)</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

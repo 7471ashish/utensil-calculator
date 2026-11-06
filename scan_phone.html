@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open App on Your Phone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 24px;
+      padding: 32px 28px;
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .badge {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .qr-box {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 16px;
+      display: inline-block;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+    }
+    .qr-box img {
+      display: block;
+      width: 220px;
+      height: 220px;
+    }
+    .link-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 1.05rem;
+      color: #38bdf8;
+      margin-bottom: 24px;
+      word-break: break-all;
+    }
+    .steps {
+      text-align: left;
+      background: #0f172a;
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+    .step-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #cbd5e1;
+    }
+    .step-num {
+      background: #3b82f6;
+      color: white;
+      font-weight: bold;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Easiest Mobile Setup</div>
+    <h1>Scan with Your Phone Camera</h1>
+    <p>Point your phone camera at this QR code to open the Utensil Calculator app instantly:</p>
+
+    <div class="qr-box">
+      <img id="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=http://192.168.1.156:8080/mobile_preview/" alt="Scan to open on phone">
+    </div>
+
+    <div class="link-box" id="url-text">
+      http://192.168.1.156:8080/mobile_preview/
+    </div>
+
+    <div class="steps">
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <span>Make sure your phone is connected to the same Wi-Fi.</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <span>Open your phone camera, scan the QR code and tap the link.</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <span>Tap <strong>"Install App"</strong> or <strong>"Add to Home Screen"</strong> in your browser to save it as a permanent app!</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

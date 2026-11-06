@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Utensil Calculator</string>
+    <string name="title">Utensil Price Calculator</string>
+    <string name="rate_label">1. Rate of 1 kg (₹)</string>
+    <string name="rate_hint">Enter rate per 1 kg</string>
+    <string name="weight_label">2. Weight of Utensil</string>
+    <string name="weight_hint">Enter weight</string>
+    <string name="unit_grams">Grams (g)</string>
+    <string name="unit_kg">Kg</string>
+    <string name="calculated_price">Total Price</string>
+    <string name="initial_price">₹0.00</string>
+    <string name="clear">Clear</string>
+    <string name="formula_hint">Enter rate and weight above</string>
+    <string name="lang_toggle">हिंदी</string>
+</resources>

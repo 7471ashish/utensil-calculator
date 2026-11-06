@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded app icon -->
+  <rect width="512" height="512" rx="115" fill="url(#bg)"/>
+
+  <!-- Subtle inner border -->
+  <rect x="16" y="16" width="480" height="480" rx="100" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="4"/>
+
+  <!-- Scale base and pillar -->
+  <rect x="236" y="140" width="40" height="230" rx="6" fill="#f8fafc"/>
+  <path d="M170 380 L342 380 L360 410 L152 410 Z" fill="#f8fafc"/>
+
+  <!-- Scale fulcrum / balance beam -->
+  <rect x="120" y="140" width="272" height="18" rx="6" fill="#f8fafc"/>
+  <circle cx="256" cy="149" r="20" fill="url(#gold)"/>
+
+  <!-- Left pan strings & pan -->
+  <line x1="150" y1="158" x2="115" y2="245" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="150" y1="158" x2="185" y2="245" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M95 245 C95 295, 205 295, 205 245 Z" fill="#f8fafc"/>
+
+  <!-- Left pan item: Utensil / bowl -->
+  <path d="M115 235 C115 205, 185 205, 185 235 Z" fill="url(#gold)"/>
+
+  <!-- Right pan strings & pan -->
+  <line x1="362" y1="158" x2="327" y2="245" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="362" y1="158" x2="397" y2="245" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M307 245 C307 295, 417 295, 417 245 Z" fill="#f8fafc"/>
+
+  <!-- Right pan item: Weight block with KG -->
+  <rect x="340" y="205" width="44" height="36" rx="4" fill="url(#gold)"/>
+  <circle cx="362" cy="198" r="8" fill="none" stroke="url(#gold)" stroke-width="4"/>
+</svg>
+
